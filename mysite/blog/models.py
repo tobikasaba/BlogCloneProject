@@ -26,7 +26,7 @@ class Post(models.Model):
     # once a post has been created, the site returns you to the url named post_detail with the specific pk
     # i.e. {post_detail}/{pk}
     def get_absolute_url(self):
-        return reverse("post_detail", kwargs={'pk': self.pk})
+        return reverse('post_detail', kwargs={'pk': self.pk})
 
     def __str__(self):
         return self.title
@@ -48,7 +48,7 @@ class Comment(models.Model):
 
     # once a comment has been created, the site returns you to the url named post_list
     def get_absolute_url(self):
-        return reverse("post_list")
+        return reverse('post_list')
 
     def __str__(self):
         return self.text
