@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="feat: Add Post and Comment models to blog app&#10;&#10;- Created Post model with fields for author, title, text, create_date, and optional published_date.&#10;- Added `publish` method to set published_date and save the post.&#10;- Defined `approve_comments` method to filter for approved comments.&#10;- Implemented `get_absolute_url` in Post to direct users to post_detail view after creation.&#10;&#10;- Created Comment model with fields for post, author, text, create_date, and approved_comments.&#10;- Added `approve` method to set comment approval status.&#10;- Implemented `get_absolute_url` in Comment to redirect to post_list view after comment creation.&#10;&#10;This setup links comments to specific posts, enables publishing and approving posts/comments, and configures URL redirects upon creation.">
+    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="Add forms for Post and Comment models with custom widget styling&#10;&#10;- Created PostForm and CommentForm classes in forms.py&#10;- Configured Meta classes for Post and Comment to specify model fields&#10;- Applied custom CSS classes to widgets for 'title', 'text', and 'author' fields to support styling with CSS&#10;- Enables customized form input appearance and enhances UI consistency&#10;&#10;settings.py&#10;- Set up template and static folder paths in settings.py&#10;- included login redirect url">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/blog/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
       <list>
         <option value="Python Script" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -56,21 +58,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/mysite/blog" />
@@ -119,7 +122,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730392909400</updated>
       <workItem from="1730392922428" duration="10625000" />
-      <workItem from="1730409792099" duration="1058000" />
+      <workItem from="1730409792099" duration="15158000" />
     </task>
     <task id="LOCAL-00001" summary="Settings up django project for blog">
       <option name="closed" value="true" />
@@ -137,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730405256248</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add forms for Post and Comment models with custom widget styling&#10;&#10;- Created PostForm and CommentForm classes in forms.py&#10;- Configured Meta classes for Post and Comment to specify model fields&#10;- Applied custom CSS classes to widgets for 'title', 'text', and 'author' fields to support styling with CSS&#10;- Enables customized form input appearance and enhances UI consistency&#10;&#10;settings.py&#10;- Set up template and static folder paths in settings.py&#10;- included login redirect url">
+      <option name="closed" value="true" />
+      <created>1730473014630</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730473014630</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Settings up django project for blog" />
     <MESSAGE value="feat: Add Post and Comment models to blog app&#10;&#10;- Created Post model with fields for author, title, text, create_date, and optional published_date.&#10;- Added `publish` method to set published_date and save the post.&#10;- Defined `approve_comments` method to filter for approved comments.&#10;- Implemented `get_absolute_url` in Post to direct users to post_detail view after creation.&#10;&#10;- Created Comment model with fields for post, author, text, create_date, and approved_comments.&#10;- Added `approve` method to set comment approval status.&#10;- Implemented `get_absolute_url` in Comment to redirect to post_list view after comment creation.&#10;&#10;This setup links comments to specific posts, enables publishing and approving posts/comments, and configures URL redirects upon creation." />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Add Post and Comment models to blog app&#10;&#10;- Created Post model with fields for author, title, text, create_date, and optional published_date.&#10;- Added `publish` method to set published_date and save the post.&#10;- Defined `approve_comments` method to filter for approved comments.&#10;- Implemented `get_absolute_url` in Post to direct users to post_detail view after creation.&#10;&#10;- Created Comment model with fields for post, author, text, create_date, and approved_comments.&#10;- Added `approve` method to set comment approval status.&#10;- Implemented `get_absolute_url` in Comment to redirect to post_list view after comment creation.&#10;&#10;This setup links comments to specific posts, enables publishing and approving posts/comments, and configures URL redirects upon creation." />
+    <MESSAGE value="Add forms for Post and Comment models with custom widget styling&#10;&#10;- Created PostForm and CommentForm classes in forms.py&#10;- Configured Meta classes for Post and Comment to specify model fields&#10;- Applied custom CSS classes to widgets for 'title', 'text', and 'author' fields to support styling with CSS&#10;- Enables customized form input appearance and enhances UI consistency&#10;&#10;settings.py&#10;- Set up template and static folder paths in settings.py&#10;- included login redirect url" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add forms for Post and Comment models with custom widget styling&#10;&#10;- Created PostForm and CommentForm classes in forms.py&#10;- Configured Meta classes for Post and Comment to specify model fields&#10;- Applied custom CSS classes to widgets for 'title', 'text', and 'author' fields to support styling with CSS&#10;- Enables customized form input appearance and enhances UI consistency&#10;&#10;settings.py&#10;- Set up template and static folder paths in settings.py&#10;- included login redirect url" />
   </component>
 </project>
