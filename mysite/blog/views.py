@@ -1,12 +1,14 @@
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse_lazy
 from django.utils import timezone
 from django.views.generic import (TemplateView, ListView,
                                   DetailView, CreateView,
                                   UpdateView, DeleteView)
 
-from mysite.blog.forms import PostForm
-from mysite.blog.models import Post
+from mysite.blog.forms import PostForm, CommentForm
+from mysite.blog.models import Post, Comment
 
 
 # Create your views here.
@@ -90,3 +92,64 @@ class DraftListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Post.objects.filter(published_date__isnull=True).order_by('-created_date')
+
+
+########################################################
+########################################################
+"""
+This section makes use of Function based views FBVs
+
+get_object_or_404(): This  used for getting an object from a database using a model’s manager.
+It raises an Http404 exception if the object is not found. 
+The Post object gotten is based on the primary key (pk) f the post.
+This is particularly useful for ensuring the post with the pk exists before attempting to publish it.
+"""
+
+
+@login_required
+def post_publish(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.publish()
+    return redirect('blog:post_detail', pk=post.pk)
+
+
+@login_required
+def add_comment_to_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    # if the form is sending data to the server via a POST request
+    if request.method == 'POST':
+        # Initialises the form with submitted data (stores the data in the from variable)
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            # creates a new Comment instance but does not save it to the database yet.
+            # This is useful because we want to modify the instance
+            # (specifically, we want to assign it to the post) before saving it.
+            comment = form.save(commit=False)
+            # post is a foreign key in the CommentForm Model.
+            # this assigns the post field in the comment to the post retrieved using get_object_or_404()
+            comment.post = post
+            comment.save()
+            return redirect('blog:post_detail', pk=post.pk)
+
+    # if the form is not sending any data, initialise the form and render it on the html template
+    else:
+        form = CommentForm()
+    return render(request, 'blog/comment_form.html', context={'form': form})
+
+
+@login_required
+def comment_approve(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+    comment.approve()
+    return redirect('blog:post_detail', pk=comment.post.pk)
+
+
+@login_required
+def comment_remove(request, pk):
+    comment = get_object_or_404(Comment, pk=pk)
+    post_pk = comment.post.pk
+    comment.delete()
+    # after deleting comment, django no longer has access the primary key of the post
+    # this is why the primary key of the post is stored in a separate variable 'post_pk'
+    # this makes the primary key of the post associated with the comment accessible.
+    return redirect('blog:post_detail', pk=post_pk)

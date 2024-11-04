@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="Add forms for Post and Comment models with custom widget styling&#10;&#10;- Created PostForm and CommentForm classes in forms.py&#10;- Configured Meta classes for Post and Comment to specify model fields&#10;- Applied custom CSS classes to widgets for 'title', 'text', and 'author' fields to support styling with CSS&#10;- Enables customized form input appearance and enhances UI consistency&#10;&#10;settings.py&#10;- Set up template and static folder paths in settings.py&#10;- included login redirect url">
+    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="Implement blog views and URL routing for post management&#10;&#10;- Added class-based views for blog functionality, including PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, and DraftListView.&#10;- Integrated LoginRequiredMixin to restrict access to certain views for authenticated users.&#10;- Defined custom queryset methods to filter and display published and draft posts.&#10;- Configured URL patterns for all blog views, including paths for listing, creating, updating, and deleting posts.&#10;- Added an AboutView for static content display.&#10;- Ensured proper redirection after login and post actions using success_url and redirect_field_name attributes.&#10;- crated base and about html templates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730392909400</updated>
       <workItem from="1730392922428" duration="10625000" />
-      <workItem from="1730409792099" duration="15158000" />
+      <workItem from="1730409792099" duration="25193000" />
     </task>
     <task id="LOCAL-00001" summary="Settings up django project for blog">
       <option name="closed" value="true" />
@@ -148,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730473014630</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implement blog views and URL routing for post management&#10;&#10;- Added class-based views for blog functionality, including PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, and DraftListView.&#10;- Integrated LoginRequiredMixin to restrict access to certain views for authenticated users.&#10;- Defined custom queryset methods to filter and display published and draft posts.&#10;- Configured URL patterns for all blog views, including paths for listing, creating, updating, and deleting posts.&#10;- Added an AboutView for static content display.&#10;- Ensured proper redirection after login and post actions using success_url and redirect_field_name attributes.&#10;- crated base and about html templates">
+      <option name="closed" value="true" />
+      <created>1730645069265</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730645069265</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +164,7 @@
     <MESSAGE value="Settings up django project for blog" />
     <MESSAGE value="feat: Add Post and Comment models to blog app&#10;&#10;- Created Post model with fields for author, title, text, create_date, and optional published_date.&#10;- Added `publish` method to set published_date and save the post.&#10;- Defined `approve_comments` method to filter for approved comments.&#10;- Implemented `get_absolute_url` in Post to direct users to post_detail view after creation.&#10;&#10;- Created Comment model with fields for post, author, text, create_date, and approved_comments.&#10;- Added `approve` method to set comment approval status.&#10;- Implemented `get_absolute_url` in Comment to redirect to post_list view after comment creation.&#10;&#10;This setup links comments to specific posts, enables publishing and approving posts/comments, and configures URL redirects upon creation." />
     <MESSAGE value="Add forms for Post and Comment models with custom widget styling&#10;&#10;- Created PostForm and CommentForm classes in forms.py&#10;- Configured Meta classes for Post and Comment to specify model fields&#10;- Applied custom CSS classes to widgets for 'title', 'text', and 'author' fields to support styling with CSS&#10;- Enables customized form input appearance and enhances UI consistency&#10;&#10;settings.py&#10;- Set up template and static folder paths in settings.py&#10;- included login redirect url" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add forms for Post and Comment models with custom widget styling&#10;&#10;- Created PostForm and CommentForm classes in forms.py&#10;- Configured Meta classes for Post and Comment to specify model fields&#10;- Applied custom CSS classes to widgets for 'title', 'text', and 'author' fields to support styling with CSS&#10;- Enables customized form input appearance and enhances UI consistency&#10;&#10;settings.py&#10;- Set up template and static folder paths in settings.py&#10;- included login redirect url" />
+    <MESSAGE value="Implement blog views and URL routing for post management&#10;&#10;- Added class-based views for blog functionality, including PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, and DraftListView.&#10;- Integrated LoginRequiredMixin to restrict access to certain views for authenticated users.&#10;- Defined custom queryset methods to filter and display published and draft posts.&#10;- Configured URL patterns for all blog views, including paths for listing, creating, updating, and deleting posts.&#10;- Added an AboutView for static content display.&#10;- Ensured proper redirection after login and post actions using success_url and redirect_field_name attributes.&#10;- crated base and about html templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement blog views and URL routing for post management&#10;&#10;- Added class-based views for blog functionality, including PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, and DraftListView.&#10;- Integrated LoginRequiredMixin to restrict access to certain views for authenticated users.&#10;- Defined custom queryset methods to filter and display published and draft posts.&#10;- Configured URL patterns for all blog views, including paths for listing, creating, updating, and deleting posts.&#10;- Added an AboutView for static content display.&#10;- Ensured proper redirection after login and post actions using success_url and redirect_field_name attributes.&#10;- crated base and about html templates" />
   </component>
 </project>
