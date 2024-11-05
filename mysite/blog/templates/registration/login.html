@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends '. blog/base.html' %}
+{% block content %}
+    <div class="mt-4 p-5 bg-light text-black rounded">
+        <h2>Please Log in:</h2>
+        <h3>(Must be a SuperUser, please check with the site admin</h3>
+    </div>
 
-</body>
-</html>
+    {% if form.errors %}
+        <p>Your username and password didn't match! Please try again.</p>
+    {% else %}
+    {% endif %}
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        {% form.as_p %}
+        <input type="submit" class="btn btn-primary" value="Login">
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+{% endblock %}
