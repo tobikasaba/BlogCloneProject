@@ -113,7 +113,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
-STATICFILES_DIRS = [STATIC_URL]
+# STATICFILES_DIRS = [STATIC_URL]
 
 LOGIN_REDIRECT_URL = '/'
 # Default primary key field type

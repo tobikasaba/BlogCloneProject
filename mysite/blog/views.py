@@ -7,8 +7,8 @@ from django.views.generic import (TemplateView, ListView,
                                   DetailView, CreateView,
                                   UpdateView, DeleteView)
 
-from mysite.blog.forms import PostForm, CommentForm
-from mysite.blog.models import Post, Comment
+from .forms import PostForm, CommentForm
+from .models import Post, Comment
 
 
 # Create your views here.

@@ -12,6 +12,8 @@
     width: 20px;
     height: 20px;
     background: linear-gradient(45deg, #0f8, #08f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     border-radius: 50%;
     filter: hue-rotate(0deg);
     animation: hue 10s infinite linear, spinify 2s infinite ease-in-out;
@@ -49,11 +51,18 @@
     }
 }
 
+.centerstage {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 
 /*.loader {*/
 /*    position: fixed;*/
 /*    filter: hue-rotate(0deg);*/
-/*    color: linear-gradient(45deg, #0f8, #08f);*/
+/*    background: linear-gradient(45deg, #0f8, #08f);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
 /*    animation: hue 10000ms infinite linear;*/
 
 /*}*/

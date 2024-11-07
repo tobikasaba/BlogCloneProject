@@ -4,10 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="Implementing login and logout urls and login html template&#10;- created login url path&#10;- created logout url path. This includes kwargs to direct user to new page after logout&#10;- created login html template">
+    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="populated the html base template to be extended by other templates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/static/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/static/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/comment_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/comment_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/post_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/post_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/post_draft_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/post_draft_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/post_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +79,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "actions.on.save",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.HTML",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -120,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730392909400</updated>
       <workItem from="1730392922428" duration="10625000" />
-      <workItem from="1730409792099" duration="35991000" />
+      <workItem from="1730409792099" duration="43956000" />
     </task>
     <task id="LOCAL-00001" summary="Settings up django project for blog">
       <option name="closed" value="true" />
@@ -170,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730819027332</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="populated the html base template to be extended by other templates">
+      <option name="closed" value="true" />
+      <created>1730986190899</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730986190899</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +202,7 @@
     <MESSAGE value="Implement blog views and URL routing for post management&#10;&#10;- Added class-based views for blog functionality, including PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, and DraftListView.&#10;- Integrated LoginRequiredMixin to restrict access to certain views for authenticated users.&#10;- Defined custom queryset methods to filter and display published and draft posts.&#10;- Configured URL patterns for all blog views, including paths for listing, creating, updating, and deleting posts.&#10;- Added an AboutView for static content display.&#10;- Ensured proper redirection after login and post actions using success_url and redirect_field_name attributes.&#10;- crated base and about html templates" />
     <MESSAGE value="Implement function-based views for post publishing and comment management&#10;&#10;- Added function-based views: post_publish, add_comment_to_post, comment_approve, and comment_remove to handle post publishing and comment operations.&#10;- Utilized get_object_or_404() for safe retrieval of Post and Comment objects, ensuring robust error handling.&#10;- Enabled comment addition to posts with form validation and conditional rendering.&#10;- Included comment approval and removal functionalities with appropriate redirections.&#10;- Updated URL patterns to support new views, including paths for adding comments, approving/removing comments, and publishing posts.&#10;- Ensured all views are protected by the @login_required decorator to restrict access to authenticated users.&#10;&#10;HTML templates&#10;&#10;- created the html templates to be used in association with the post and comments views and urls" />
     <MESSAGE value="Implementing login and logout urls and login html template&#10;- created login url path&#10;- created logout url path. This includes kwargs to direct user to new page after logout&#10;- created login html template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing login and logout urls and login html template&#10;- created login url path&#10;- created logout url path. This includes kwargs to direct user to new page after logout&#10;- created login html template" />
+    <MESSAGE value="populated the html base template to be extended by other templates" />
+    <option name="LAST_COMMIT_MESSAGE" value="populated the html base template to be extended by other templates" />
   </component>
 </project>
