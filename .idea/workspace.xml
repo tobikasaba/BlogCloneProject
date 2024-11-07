@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="Implement function-based views for post publishing and comment management&#10;&#10;- Added function-based views: post_publish, add_comment_to_post, comment_approve, and comment_remove to handle post publishing and comment operations.&#10;- Utilized get_object_or_404() for safe retrieval of Post and Comment objects, ensuring robust error handling.&#10;- Enabled comment addition to posts with form validation and conditional rendering.&#10;- Included comment approval and removal functionalities with appropriate redirections.&#10;- Updated URL patterns to support new views, including paths for adding comments, approving/removing comments, and publishing posts.&#10;- Ensured all views are protected by the @login_required decorator to restrict access to authenticated users.&#10;&#10;HTML templates&#10;&#10;- created the html templates to be used in association with the post and comments views and urls">
+    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="Implementing login and logout urls and login html template&#10;- created login url path&#10;- created logout url path. This includes kwargs to direct user to new page after logout&#10;- created login html template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/static/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/static/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +120,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730392909400</updated>
       <workItem from="1730392922428" duration="10625000" />
-      <workItem from="1730409792099" duration="29837000" />
+      <workItem from="1730409792099" duration="35991000" />
     </task>
     <task id="LOCAL-00001" summary="Settings up django project for blog">
       <option name="closed" value="true" />
@@ -162,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730764791632</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implementing login and logout urls and login html template&#10;- created login url path&#10;- created logout url path. This includes kwargs to direct user to new page after logout&#10;- created login html template">
+      <option name="closed" value="true" />
+      <created>1730819027332</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730819027332</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +182,7 @@
     <MESSAGE value="Add forms for Post and Comment models with custom widget styling&#10;&#10;- Created PostForm and CommentForm classes in forms.py&#10;- Configured Meta classes for Post and Comment to specify model fields&#10;- Applied custom CSS classes to widgets for 'title', 'text', and 'author' fields to support styling with CSS&#10;- Enables customized form input appearance and enhances UI consistency&#10;&#10;settings.py&#10;- Set up template and static folder paths in settings.py&#10;- included login redirect url" />
     <MESSAGE value="Implement blog views and URL routing for post management&#10;&#10;- Added class-based views for blog functionality, including PostListView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, and DraftListView.&#10;- Integrated LoginRequiredMixin to restrict access to certain views for authenticated users.&#10;- Defined custom queryset methods to filter and display published and draft posts.&#10;- Configured URL patterns for all blog views, including paths for listing, creating, updating, and deleting posts.&#10;- Added an AboutView for static content display.&#10;- Ensured proper redirection after login and post actions using success_url and redirect_field_name attributes.&#10;- crated base and about html templates" />
     <MESSAGE value="Implement function-based views for post publishing and comment management&#10;&#10;- Added function-based views: post_publish, add_comment_to_post, comment_approve, and comment_remove to handle post publishing and comment operations.&#10;- Utilized get_object_or_404() for safe retrieval of Post and Comment objects, ensuring robust error handling.&#10;- Enabled comment addition to posts with form validation and conditional rendering.&#10;- Included comment approval and removal functionalities with appropriate redirections.&#10;- Updated URL patterns to support new views, including paths for adding comments, approving/removing comments, and publishing posts.&#10;- Ensured all views are protected by the @login_required decorator to restrict access to authenticated users.&#10;&#10;HTML templates&#10;&#10;- created the html templates to be used in association with the post and comments views and urls" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement function-based views for post publishing and comment management&#10;&#10;- Added function-based views: post_publish, add_comment_to_post, comment_approve, and comment_remove to handle post publishing and comment operations.&#10;- Utilized get_object_or_404() for safe retrieval of Post and Comment objects, ensuring robust error handling.&#10;- Enabled comment addition to posts with form validation and conditional rendering.&#10;- Included comment approval and removal functionalities with appropriate redirections.&#10;- Updated URL patterns to support new views, including paths for adding comments, approving/removing comments, and publishing posts.&#10;- Ensured all views are protected by the @login_required decorator to restrict access to authenticated users.&#10;&#10;HTML templates&#10;&#10;- created the html templates to be used in association with the post and comments views and urls" />
+    <MESSAGE value="Implementing login and logout urls and login html template&#10;- created login url path&#10;- created logout url path. This includes kwargs to direct user to new page after logout&#10;- created login html template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing login and logout urls and login html template&#10;- created login url path&#10;- created logout url path. This includes kwargs to direct user to new page after logout&#10;- created login html template" />
   </component>
 </project>
