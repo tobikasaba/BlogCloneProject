@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="Complete blog project with UI improvements, authentication, and model adjustments&#10;&#10;- **About Page**: Updated content to detail the site’s purpose and features.&#10;&#10;- **Admin Setup**: Registered Post and Comment models in the admin panel; created superuser for management.&#10;&#10;**base.html**&#10;- Updated navbar: set background color to dark, text to white, and applied `techfont` class.&#10;- Renamed main page link to &quot;Home&quot;.&#10;- Added LinkedIn and GitHub links that open in new tabs.&#10;- Replaced logout link with a POST request form for enhanced security.&#10;- Removed deprecated glyphicons.&#10;&#10;**blog.css**&#10;- Changed background color and set navbar text color to white for improved UI consistency.&#10;&#10;**models.py**&#10;- Removed `timezone.now` function call from `created_date` field for improved model functionality.&#10;- Fixed field naming errors and corrected URL references.&#10;&#10;**Templates**&#10;- Populated templates with required data:&#10;  - `post_confirm_delete.html`&#10;  - `post_draft_list.html`&#10;  - `post_form.html`&#10;  - `comment_form.html`&#10;&#10;**post_detail.html**&#10;- Updated button styles and removed deprecated glyphicons.&#10;- Fixed bug displaying repeated post title; now shows post text.&#10;&#10;**post_list.html**&#10;- Added conditional check to handle empty pages.&#10;- Added links for publishing and creating posts to improve user navigation.&#10;&#10;**urls.py**&#10;- Added login path with `LoginView` and configured logout path with `LogoutView`, redirecting to `post_list`.&#10;- Consolidated authentication paths under `accounts/` for consistent URL structure.&#10;&#10;**views.py**&#10;- Renamed post creation view to `CreatePostView`.&#10;- Set `template_name` and `context_object_name` for `DraftListView` to ensure it renders correctly on the draft list page.&#10;- Corrected post-login redirect behavior for improved user experience." />
+    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="workspace.xml updated">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730392909400</updated>
       <workItem from="1730392922428" duration="10625000" />
-      <workItem from="1730409792099" duration="81128000" />
+      <workItem from="1730409792099" duration="84449000" />
     </task>
     <task id="LOCAL-00001" summary="Settings up django project for blog">
       <option name="closed" value="true" />
@@ -190,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731101047567</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="workspace.xml updated">
+      <option name="closed" value="true" />
+      <created>1731102068213</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1731102068214</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +216,7 @@
     <MESSAGE value="populated the html base template to be extended by other templates" />
     <MESSAGE value="Extended the base template in all the templates in the blog app&#10;&#10;Update post_detail.html and post_list.html templates to display post content, comments, and actions&#10;&#10;- Modified post detail template to display post title, content, and publish status.&#10;- Added conditional publish button for unpublished posts and post action buttons (edit, delete) for authenticated users.&#10;- Enabled comment addition, approval, and removal functionalities, with visibility controlled based on user authentication.&#10;- Displayed comments with approval status and author information under each post.&#10;- Updated post list template to display a list of posts with title links, publish date, and approved comment count." />
     <MESSAGE value="Complete blog project with UI improvements, authentication, and model adjustments&#10;&#10;- **About Page**: Updated content to detail the site’s purpose and features.&#10;&#10;- **Admin Setup**: Registered Post and Comment models in the admin panel; created superuser for management.&#10;&#10;**base.html**&#10;- Updated navbar: set background color to dark, text to white, and applied `techfont` class.&#10;- Renamed main page link to &quot;Home&quot;.&#10;- Added LinkedIn and GitHub links that open in new tabs.&#10;- Replaced logout link with a POST request form for enhanced security.&#10;- Removed deprecated glyphicons.&#10;&#10;**blog.css**&#10;- Changed background color and set navbar text color to white for improved UI consistency.&#10;&#10;**models.py**&#10;- Removed `timezone.now` function call from `created_date` field for improved model functionality.&#10;- Fixed field naming errors and corrected URL references.&#10;&#10;**Templates**&#10;- Populated templates with required data:&#10;  - `post_confirm_delete.html`&#10;  - `post_draft_list.html`&#10;  - `post_form.html`&#10;  - `comment_form.html`&#10;&#10;**post_detail.html**&#10;- Updated button styles and removed deprecated glyphicons.&#10;- Fixed bug displaying repeated post title; now shows post text.&#10;&#10;**post_list.html**&#10;- Added conditional check to handle empty pages.&#10;- Added links for publishing and creating posts to improve user navigation.&#10;&#10;**urls.py**&#10;- Added login path with `LoginView` and configured logout path with `LogoutView`, redirecting to `post_list`.&#10;- Consolidated authentication paths under `accounts/` for consistent URL structure.&#10;&#10;**views.py**&#10;- Renamed post creation view to `CreatePostView`.&#10;- Set `template_name` and `context_object_name` for `DraftListView` to ensure it renders correctly on the draft list page.&#10;- Corrected post-login redirect behavior for improved user experience." />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete blog project with UI improvements, authentication, and model adjustments&#10;&#10;- **About Page**: Updated content to detail the site’s purpose and features.&#10;&#10;- **Admin Setup**: Registered Post and Comment models in the admin panel; created superuser for management.&#10;&#10;**base.html**&#10;- Updated navbar: set background color to dark, text to white, and applied `techfont` class.&#10;- Renamed main page link to &quot;Home&quot;.&#10;- Added LinkedIn and GitHub links that open in new tabs.&#10;- Replaced logout link with a POST request form for enhanced security.&#10;- Removed deprecated glyphicons.&#10;&#10;**blog.css**&#10;- Changed background color and set navbar text color to white for improved UI consistency.&#10;&#10;**models.py**&#10;- Removed `timezone.now` function call from `created_date` field for improved model functionality.&#10;- Fixed field naming errors and corrected URL references.&#10;&#10;**Templates**&#10;- Populated templates with required data:&#10;  - `post_confirm_delete.html`&#10;  - `post_draft_list.html`&#10;  - `post_form.html`&#10;  - `comment_form.html`&#10;&#10;**post_detail.html**&#10;- Updated button styles and removed deprecated glyphicons.&#10;- Fixed bug displaying repeated post title; now shows post text.&#10;&#10;**post_list.html**&#10;- Added conditional check to handle empty pages.&#10;- Added links for publishing and creating posts to improve user navigation.&#10;&#10;**urls.py**&#10;- Added login path with `LoginView` and configured logout path with `LogoutView`, redirecting to `post_list`.&#10;- Consolidated authentication paths under `accounts/` for consistent URL structure.&#10;&#10;**views.py**&#10;- Renamed post creation view to `CreatePostView`.&#10;- Set `template_name` and `context_object_name` for `DraftListView` to ensure it renders correctly on the draft list page.&#10;- Corrected post-login redirect behavior for improved user experience." />
+    <MESSAGE value="workspace.xml updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml updated" />
   </component>
 </project>
