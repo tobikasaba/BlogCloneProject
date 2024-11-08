@@ -63,7 +63,7 @@ class PostDetailView(DetailView):
     model = Post
 
 
-class PostCreateView(LoginRequiredMixin, CreateView):
+class CreatePostView(LoginRequiredMixin, CreateView):
     login_url = '/login/'
     # redirect users to the detail view once they've logged in
     redirect_field_name = 'blog/post_detail.html'
@@ -87,8 +87,10 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
 
 class DraftListView(LoginRequiredMixin, ListView):
     login_url = '/login/'
-    redirect_field_name = 'blog/post_list.html'
+    template_name = 'blog/post_draft_list.html'
+    redirect_field_name = 'blog/post_draft_list.html'
     model = Post
+    context_object_name = 'posts'
 
     def get_queryset(self):
         return Post.objects.filter(published_date__isnull=True).order_by('-created_date')
@@ -110,7 +112,7 @@ This is particularly useful for ensuring the post with the pk exists before atte
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
-    return redirect('blog:post_detail', pk=post.pk)
+    return redirect('blog:post_detail', pk=pk)
 
 
 @login_required

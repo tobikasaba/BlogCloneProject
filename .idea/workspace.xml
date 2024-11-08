@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="populated the html base template to be extended by other templates">
+    <list default="true" id="1333fd79-5334-4886-972e-c98b64258d05" name="Changes" comment="Extended the base template in all the templates in the blog app&#10;&#10;Update post_detail.html and post_list.html templates to display post content, comments, and actions&#10;&#10;- Modified post detail template to display post title, content, and publish status.&#10;- Added conditional publish button for unpublished posts and post action buttons (edit, delete) for authenticated users.&#10;- Enabled comment addition, approval, and removal functionalities, with visibility controlled based on user authentication.&#10;- Displayed comments with approval status and author information under each post.&#10;- Updated post list template to display a list of posts with title links, publish date, and approved comment count.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/static/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/static/css/blog.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/base.html" afterDir="false" />
@@ -16,8 +18,8 @@
       <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/post_form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/templates/blog/post_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/blog/post_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mysite/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/mysite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mysite/mysite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mysite/mysite/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,7 +133,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730392909400</updated>
       <workItem from="1730392922428" duration="10625000" />
-      <workItem from="1730409792099" duration="43956000" />
+      <workItem from="1730409792099" duration="80517000" />
     </task>
     <task id="LOCAL-00001" summary="Settings up django project for blog">
       <option name="closed" value="true" />
@@ -189,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730986190899</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Extended the base template in all the templates in the blog app&#10;&#10;Update post_detail.html and post_list.html templates to display post content, comments, and actions&#10;&#10;- Modified post detail template to display post title, content, and publish status.&#10;- Added conditional publish button for unpublished posts and post action buttons (edit, delete) for authenticated users.&#10;- Enabled comment addition, approval, and removal functionalities, with visibility controlled based on user authentication.&#10;- Displayed comments with approval status and author information under each post.&#10;- Updated post list template to display a list of posts with title links, publish date, and approved comment count.">
+      <option name="closed" value="true" />
+      <created>1730997749054</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1730997749054</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +213,7 @@
     <MESSAGE value="Implement function-based views for post publishing and comment management&#10;&#10;- Added function-based views: post_publish, add_comment_to_post, comment_approve, and comment_remove to handle post publishing and comment operations.&#10;- Utilized get_object_or_404() for safe retrieval of Post and Comment objects, ensuring robust error handling.&#10;- Enabled comment addition to posts with form validation and conditional rendering.&#10;- Included comment approval and removal functionalities with appropriate redirections.&#10;- Updated URL patterns to support new views, including paths for adding comments, approving/removing comments, and publishing posts.&#10;- Ensured all views are protected by the @login_required decorator to restrict access to authenticated users.&#10;&#10;HTML templates&#10;&#10;- created the html templates to be used in association with the post and comments views and urls" />
     <MESSAGE value="Implementing login and logout urls and login html template&#10;- created login url path&#10;- created logout url path. This includes kwargs to direct user to new page after logout&#10;- created login html template" />
     <MESSAGE value="populated the html base template to be extended by other templates" />
-    <option name="LAST_COMMIT_MESSAGE" value="populated the html base template to be extended by other templates" />
+    <MESSAGE value="Extended the base template in all the templates in the blog app&#10;&#10;Update post_detail.html and post_list.html templates to display post content, comments, and actions&#10;&#10;- Modified post detail template to display post title, content, and publish status.&#10;- Added conditional publish button for unpublished posts and post action buttons (edit, delete) for authenticated users.&#10;- Enabled comment addition, approval, and removal functionalities, with visibility controlled based on user authentication.&#10;- Displayed comments with approval status and author information under each post.&#10;- Updated post list template to display a list of posts with title links, publish date, and approved comment count." />
+    <option name="LAST_COMMIT_MESSAGE" value="Extended the base template in all the templates in the blog app&#10;&#10;Update post_detail.html and post_list.html templates to display post content, comments, and actions&#10;&#10;- Modified post detail template to display post title, content, and publish status.&#10;- Added conditional publish button for unpublished posts and post action buttons (edit, delete) for authenticated users.&#10;- Enabled comment addition, approval, and removal functionalities, with visibility controlled based on user authentication.&#10;- Displayed comments with approval status and author information under each post.&#10;- Updated post list template to display a list of posts with title links, publish date, and approved comment count." />
   </component>
 </project>

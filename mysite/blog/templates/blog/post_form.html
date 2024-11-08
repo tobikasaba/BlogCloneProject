@@ -1,4 +1,12 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-
+    <h1>New Post</h1>
+    <form action="" class="post-from" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="save btn btn-primary" type="submit">Save</button>
+        <button class="save btn btn-danger" type="button" onclick="window.history.back();">Cancel</button>
+        {#        <button class="save btn btn-danger"><a href="{{ request.META.HTTP_REFERER|escape }}">Cancel</a></button>#}
+    </form>
+    <script> var editor = new MediumEditor('.editable');</script>
 {% endblock %}

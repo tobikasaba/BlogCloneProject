@@ -25,9 +25,9 @@
           rel="stylesheet">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-dark techfont">
     <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'blog:post_list' %}">My Blog</a>
+        <a class="navbar-brand bigbrand" href="{% url 'blog:post_list' %}">Home</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -38,10 +38,13 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'blog:about' %}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="https://github.com/tobikasaba">Github</a>
+                    {#opens in a new tab#}
+                    <a class="nav-link active" aria-current="page" href="https://github.com/tobikasaba" target="_blank">Github</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://www.linkedin.com/in/tobi-kasaba-6212b413b/">LinkedIn</a>
+                    {#opens in a new tab#}
+                    <a class="nav-link active" aria-current="page"
+                       href="https://www.linkedin.com/in/tobi-kasaba-6212b413b/" target="_blank">LinkedIn</a>
                 </li>
             </ul>
 
@@ -55,15 +58,20 @@
                            href="{% url 'blog:post_draft_list' %}">Drafts</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'logout' %}">Log Out</a>
+                        {#Django requires POST request to prevent CSRF attacks#}
+                        {#Using direct url to log out sends a GET request#}
+                        {#To implement this, a logout form is created that sends a POST request#}
+                        <form id="logout-form" method="post" action="{% url 'logout' %}">
+                            {% csrf_token %}
+                            <button type="submit" class="nav-link active">Log Out</button>
+                        </form>
                     </li>
                     <li class="nav-item">
-                        <a class="navbar-text" aria-current="page">Welcome {{ user.username }}</a>
+                        <span class="nav-link active" aria-current="page">Welcome: {{ user.username }}</span>
                     </li>
                 {% else %}
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Login<span
-                                class="glyphicon glyphicon-user"></span></a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'login' %}">Login</a>
                     </li>
                 {% endif %}
             </ul>
