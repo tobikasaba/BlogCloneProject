@@ -32,6 +32,9 @@
                 <p>{{ comment.text|safe|linebreaks }}</p>
                 <p>Posted By: {{ comment.author }}</p>
                 <hr>
+            {% else %}
+                <p>{{ comment.text|safe|linebreaks }}</p>
+                <hr>
             {% endif %}
         {% empty %}
             <p>No Comments</p>
