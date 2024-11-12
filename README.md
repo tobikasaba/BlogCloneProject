@@ -3,7 +3,9 @@ A blog platform where users can create, edit, and manage posts, publish drafts, 
 
 Available at: https://tobikasaba.pythonanywhere.com
 
-Contact me at: tobikasaba@gmail.com for a SuperUser Log in details
+Contact me at: tobikasaba@gmail.com for SuperUser Log in details
+
+***Debug is currently false in settings.py. 
 
 Key Features:
 Create and Publish Posts: Write and publish blog posts with ease.
@@ -12,6 +14,7 @@ Comment System: Users can engage by adding comments to posts.
 Delete Posts: Allows removal of posts for better content management.
 
 Snapshots
+
 Home Page
 <img width="1272" alt="Screenshot 2024-11-11 at 22 02 33" src="https://github.com/user-attachments/assets/2009f103-1d7c-4fc6-b0b3-1c4e86f5e725">
 
